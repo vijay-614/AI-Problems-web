@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-gaming - Play Chess & Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>v-gaming</h1>
+            <p class="subtitle">Play Chess & Tic-Tac-Toe</p>
+        </header>
+
+        <nav class="game-nav">
+            <button class="nav-btn active" data-game="home">Home</button>
+            <button class="nav-btn" data-game="tictactoe">Tic-Tac-Toe</button>
+            <button class="nav-btn" data-game="chess">Chess</button>
+        </nav>
+
+        <main>
+            <!-- Home Screen -->
+            <div id="home" class="game-section active">
+                <div class="welcome-screen">
+                    <h2>Welcome to v-gaming!</h2>
+                    <p>Choose a game from the navigation above to start playing.</p>
+                    <div class="game-cards">
+                        <div class="game-card" data-game="tictactoe">
+                            <div class="card-icon">⭕</div>
+                            <h3>Tic-Tac-Toe</h3>
+                            <p>Classic 3x3 grid game</p>
+                        </div>
+                        <div class="game-card" data-game="chess">
+                            <div class="card-icon">♟️</div>
+                            <h3>Chess</h3>
+                            <p>Strategic board game</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tic-Tac-Toe Game -->
+            <div id="tictactoe" class="game-section">
+                <div class="game-header">
+                    <h2>Tic-Tac-Toe</h2>
+                    <button class="reset-btn" id="reset-ttt">New Game</button>
+                </div>
+                <div class="mode-selection">
+                    <button class="mode-btn active" data-mode="2players" data-game="tictactoe">2 Players</button>
+                    <button class="mode-btn" data-mode="online" data-game="tictactoe">Play Online</button>
+                </div>
+                <div class="game-info">
+                    <p id="ttt-status">Player X's turn</p>
+                    <p id="ttt-mode-info" class="mode-info">Local 2-player mode</p>
+                </div>
+                <div class="ttt-board" id="ttt-board">
+                    <div class="ttt-cell" data-index="0"></div>
+                    <div class="ttt-cell" data-index="1"></div>
+                    <div class="ttt-cell" data-index="2"></div>
+                    <div class="ttt-cell" data-index="3"></div>
+                    <div class="ttt-cell" data-index="4"></div>
+                    <div class="ttt-cell" data-index="5"></div>
+                    <div class="ttt-cell" data-index="6"></div>
+                    <div class="ttt-cell" data-index="7"></div>
+                    <div class="ttt-cell" data-index="8"></div>
+                </div>
+            </div>
+
+            <!-- Chess Game -->
+            <div id="chess" class="game-section">
+                <div class="game-header">
+                    <h2>Chess</h2>
+                    <button class="reset-btn" id="reset-chess">New Game</button>
+                </div>
+                <div class="mode-selection">
+                    <button class="mode-btn active" data-mode="2players" data-game="chess">2 Players</button>
+                    <button class="mode-btn" data-mode="online" data-game="chess">Play Online</button>
+                </div>
+                <div class="game-info">
+                    <p id="chess-status">White's turn</p>
+                    <p id="chess-mode-info" class="mode-info">Local 2-player mode</p>
+                </div>
+                <div class="chess-container">
+                    <div class="chess-board" id="chess-board"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="tictactoe.js"></script>
+    <script src="chess.js"></script>
+</body>
+</html>
+
